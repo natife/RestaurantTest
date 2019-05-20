@@ -22,7 +22,15 @@ class FeedViewController: UIViewController
     
     private func configController()
     {
-        configTableView()
+        NetworkService().fetchRestaurants()
+        { [weak self] feeds in
+            guard let self = self else {return}
+            self.items = feeds
+            DispatchQueue.main.async
+                {
+                self.configTableView()
+            }
+        }
     }
 
     private func configTableView()
