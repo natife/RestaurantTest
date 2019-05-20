@@ -78,7 +78,7 @@
                         </constraints>
                     </view>
                 </subviews>
-                <color key="backgroundColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
+                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                 <constraints>
                     <constraint firstItem="2Aw-Uw-aEK" firstAttribute="top" secondItem="CIp-RV-eTA" secondAttribute="bottom" constant="15" id="1Qw-AU-vUb"/>
                     <constraint firstItem="lX8-cH-tWY" firstAttribute="leading" secondItem="4zX-7y-EQY" secondAttribute="leading" id="7SS-bV-SDZ"/>
@@ -108,7 +108,7 @@
                 <outlet property="restaurantImage" destination="lOc-HZ-Kyk" id="Mga-AT-p7a"/>
                 <outlet property="restaurantName" destination="D1w-Bu-67o" id="YtX-zu-yAQ"/>
             </connections>
-            <point key="canvasLocation" x="86" y="49"/>
+            <point key="canvasLocation" x="84" y="52"/>
         </tableViewCell>
     </objects>
 </document>

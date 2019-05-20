@@ -23,4 +23,3 @@ enum Colors
     static let navigationColor = "#DDDDDDff"
     static let cellBorder = "#D1D1D1ff"
 }
-

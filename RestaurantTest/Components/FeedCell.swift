@@ -20,7 +20,8 @@ class FeedCell: UITableViewCell
     override func awakeFromNib()
     {
         super.awakeFromNib()
-        self.layer.borderColor = UIColor(named: Colors.cellBorder)?.cgColor
+        self.layer.borderColor = UIColor(hexString: Colors.cellBorder)?.cgColor
+            
         self.layer.borderWidth = 1.0
     }
 
