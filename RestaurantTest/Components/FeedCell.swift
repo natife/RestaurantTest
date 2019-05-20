@@ -10,7 +10,7 @@ import UIKit
 
 class FeedCell: UITableViewCell
 {
-    @IBOutlet weak var restaurantImage: UIImageView!
+    @IBOutlet weak var restaurantImage: ImageView!
     @IBOutlet weak var restaurantName: UILabel!
     @IBOutlet weak var foodName: UILabel!
     @IBOutlet weak var foodPrice: UILabel!
@@ -27,7 +27,7 @@ class FeedCell: UITableViewCell
     private func config()
     {
         self.restaurantName.text = item.restaurant
-//        self.restaurantImage
+        self.restaurantImage.loadImage(urlString: item.image_url)
         
         self.foodName.text = item.food_name
         self.foodPrice.text = "$\(item.price)"
@@ -37,5 +37,10 @@ class FeedCell: UITableViewCell
     {
         self.item = item
         config()
+    }
+    
+    func getItem() -> Feed
+    {
+        return item
     }
 }

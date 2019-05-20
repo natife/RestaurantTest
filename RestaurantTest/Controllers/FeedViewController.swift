@@ -26,6 +26,7 @@ class FeedViewController: UIViewController
         { [weak self] feeds in
             guard let self = self else {return}
             self.items = feeds
+            
             DispatchQueue.main.async
                 {
                 self.configTableView()
@@ -41,6 +42,23 @@ class FeedViewController: UIViewController
         self.feedTableView.rowHeight = UITableView.automaticDimension
         self.feedTableView.estimatedRowHeight = 170
         self.feedTableView.reloadData()
+    }
+    
+    private func details(with item: Feed)
+    {
+        let viewController =  self.storyboard?.instantiateViewController(withIdentifier: "DetailsViewController")
+        
+        if let view = viewController as? DetailsViewController
+        {
+            view.config(with: item)
+            
+            let navigationController = UINavigationController(rootViewController: view)
+            
+            DispatchQueue.main.async
+                {
+                self.present(navigationController, animated: true, completion: nil)
+            }
+        }
     }
 }
 
@@ -62,6 +80,7 @@ extension FeedViewController: UITableViewDataSource, UITableViewDelegate
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
         let cell = tableView.cellForRow(at: indexPath) as! FeedCell
+        details(with: cell.getItem())
     }
     
 }
