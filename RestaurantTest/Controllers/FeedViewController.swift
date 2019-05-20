@@ -22,7 +22,7 @@ class FeedViewController: UIViewController
     
     private func configController()
     {
-        NetworkService().fetchRestaurants()
+        NetworkService().getFeed()
         { [weak self] feeds in
             guard let self = self else {return}
             self.items = feeds
@@ -37,7 +37,7 @@ class FeedViewController: UIViewController
     {
         self.feedTableView.delegate = self
         self.feedTableView.dataSource = self
-        self.feedTableView.register(FeedCell.self, forCellReuseIdentifier: "FeedCell")
+        self.feedTableView.registerWithNib(cellClass: FeedCell.self)
         self.feedTableView.rowHeight = UITableView.automaticDimension
         self.feedTableView.estimatedRowHeight = 170
         self.feedTableView.reloadData()
@@ -54,13 +54,14 @@ extension FeedViewController: UITableViewDataSource, UITableViewDelegate
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "FeedCell", for: indexPath) as! FeedCell        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "FeedCell", for: indexPath) as! FeedCell
+        cell.config(with: self.items[indexPath.row])
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
-//        let cell = tableView.cellForRow(at: indexPath) as! FeedCell
+        let cell = tableView.cellForRow(at: indexPath) as! FeedCell
     }
     
 }

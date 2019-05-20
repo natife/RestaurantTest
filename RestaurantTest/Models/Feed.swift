@@ -11,7 +11,7 @@ import Foundation
 struct Feed: Codable
 {
     let restaurant: String
-    let foodName: String
+    let food_name: String
     let price: Float
-    let imageUrl: String
+    let image_url: String
 }

@@ -18,6 +18,7 @@
 		1DCFE8FD2292A82800E730E6 /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCFE8FC2292A82800E730E6 /* Feed.swift */; };
 		1DCFE9032292AB0C00E730E6 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCFE9022292AB0C00E730E6 /* NetworkService.swift */; };
 		1DCFE9052292AB7D00E730E6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCFE9042292AB7D00E730E6 /* Constants.swift */; };
+		1DCFE9082292B4C500E730E6 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCFE9072292B4C500E730E6 /* Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		1DCFE8FC2292A82800E730E6 /* Feed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feed.swift; sourceTree = "<group>"; };
 		1DCFE9022292AB0C00E730E6 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		1DCFE9042292AB7D00E730E6 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		1DCFE9072292B4C500E730E6 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				1DCFE9042292AB7D00E730E6 /* Constants.swift */,
+				1DCFE9072292B4C500E730E6 /* Extension.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -201,6 +204,7 @@
 				1DCFE9052292AB7D00E730E6 /* Constants.swift in Sources */,
 				1DCFE9032292AB0C00E730E6 /* NetworkService.swift in Sources */,
 				1DCFE8F52292A3D300E730E6 /* DetailsViewController.swift in Sources */,
+				1DCFE9082292B4C500E730E6 /* Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,6 +351,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SP3T7YKV2Q;
 				INFOPLIST_FILE = RestaurantTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -364,6 +369,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SP3T7YKV2Q;
 				INFOPLIST_FILE = RestaurantTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

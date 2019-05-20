@@ -13,7 +13,7 @@ class NetworkService
     private let session = URLSession.shared
     
     @discardableResult
-    func fetchRestaurants(_ completion: @escaping ([Feed]) -> ()) -> URLSessionDataTask
+    func getFeed(_ completion: @escaping ([Feed]) -> ()) -> URLSessionDataTask
     {
         var request = URLRequest(url: URL(string: Network.endpoint.dataEndpoint)!)
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")

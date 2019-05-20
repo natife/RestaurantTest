@@ -10,15 +10,32 @@ import UIKit
 
 class FeedCell: UITableViewCell
 {
-
+    @IBOutlet weak var restaurantImage: UIImageView!
+    @IBOutlet weak var restaurantName: UILabel!
+    @IBOutlet weak var foodName: UILabel!
+    @IBOutlet weak var foodPrice: UILabel!
+    
+    private var item: Feed!
+    
     override func awakeFromNib()
     {
         super.awakeFromNib()
+        self.layer.borderColor = UIColor(named: Colors.cellBorder)?.cgColor
+        self.layer.borderWidth = 1.0
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool)
+    private func config()
     {
-        super.setSelected(selected, animated: animated)
+        self.restaurantName.text = item.restaurant
+//        self.restaurantImage
+        
+        self.foodName.text = item.food_name
+        self.foodPrice.text = "$\(item.price)"
     }
     
+    func config(with item: Feed)
+    {
+        self.item = item
+        config()
+    }
 }
